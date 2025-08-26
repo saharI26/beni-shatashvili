@@ -1,0 +1,8 @@
+# Netlify redirects file
+# Ensures proper file serving
+
+# Serve images with correct MIME types
+/images/* /images/:splat 200
+
+# Handle any 404s gracefully
+/* /index.html 200
