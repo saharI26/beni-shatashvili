@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>בני שטאשוילי | מאמן כושר ומטפל מוסמך</title>
+  <meta name="description" content="בני שטאשוילי, מאמן כושר ומטפל מוסמך במגע. עיסוי רפואי, עיסוי שוודי, עיסוי לספורטאים, כוסות רוח וטיפול בטריגר פוינטס. קבעו טיפול או אימון מותאם אישית." />
+  <meta property="og:title" content="בני שטאשוילי | מאמן כושר ומטפל מוסמך" />
+  <meta property="og:description" content="עיסוי רפואי, עיסוי לספורטאים, כוסות רוח וטריגר פוינטס. מותאם אישית לצרכים ולמטרות שלכם." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1600&auto=format&fit=crop" />
+  <meta name="theme-color" content="#b71c1c" />
+  <style>
+    :root {
+      --primary: #b71c1c;
+      --primary-2: #7b1fa2;
+      --bg: #f7f7f7;
+      --text: #222;
+      --muted: #666;
+      --card: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Heebo", Arial, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* Header */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: saturate(1.2) blur(6px);
+      background: rgba(255,255,255,.85);
+      border-bottom: 1px solid #eee;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .brand { font-weight: 800; letter-spacing: .3px; }
+    .brand span { color: var(--primary); }
+    .nav-actions { display: flex; gap: 8px; }
+    .btn { display: inline-block; padding: 10px 16px; border-radius: 10px; font-weight: 600; transition: transform .08s ease, box-shadow .2s ease, background .25s ease; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--primary); color: #fff; box-shadow: 0 6px 18px rgba(183,28,28,.25); }
+    .btn-primary:hover { background: #9a1717; }
+    .btn-ghost { background: #fff; color: var(--primary); border: 1px solid rgba(0,0,0,.06); }
+    .btn-ghost:hover { background: #f9f9f9; }
+
+    /* Hero */
+    .hero {
+      position: relative; isolation: isolate; color: #fff; text-align: center;
+      min-height: 72vh; display: grid; place-items: center; overflow: clip;
+      background: #111;
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: 0; z-index: -2;
+      background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1800&auto=format&fit=crop');
+      background-size: cover; background-position: center;
+      transform: scale(1.03);
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background: linear-gradient(140deg, rgba(183,28,28,.75), rgba(123,31,162,.65));
+    }
+    .hero-content { 
+      padding: 48px 16px; 
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .hero h1 { margin: 0 0 10px; font-size: clamp(28px, 6vw, 48px); font-weight: 900; }
+    .hero p { margin: 0 auto 20px; max-width: 720px; font-size: clamp(16px, 2.5vw, 20px); opacity: .95; }
+    .hero-ctas { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    
+    .hero-image {
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      transform: translateY(-50%);
+      width: 300px;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+    .hero-profile {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,.4);
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,.2);
+    }
+    
+    @media (max-width: 768px) {
+      .hero-image {
+        display: none;
+      }
+      .hero-content {
+        max-width: 100%;
+      }
+    }
+
+    /* Sections */
+    section { margin: 32px 0; }
+    .card { background: var(--card); border: 1px solid #eee; border-radius: 16px; box-shadow: 0 8px 22px rgba(0,0,0,.06); padding: 24px; }
+    h2.section-title { margin: 0 0 16px; font-size: 26px; color: var(--primary); }
+    .grid { display: grid; gap: 16px; }
+    @media (min-width: 760px) { .grid-2 { grid-template-columns: repeat(2, 1fr);} .grid-3 { grid-template-columns: repeat(3, 1fr);} }
+
+    /* Services */
+    .service { background: #fafafa; border: 1px solid #eee; border-radius: 14px; padding: 16px; }
+    .service h3 { margin: 0 0 8px; font-size: 18px; color: #111; }
+    .service p { margin: 0; color: var(--muted); }
+
+    /* Highlight band */
+    .band {
+      background: #fff;
+      border: 1px solid #eee; border-radius: 16px; padding: 18px 16px; text-align: center;
+    }
+
+    /* Contact */
+    .contact-wrap { display: grid; gap: 16px; }
+    .contact-item { background: #fafafa; border: 1px solid #eee; border-radius: 12px; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; }
+    .contact-item b { color: #111; }
+    .contact-actions { display: flex; gap: 8px; }
+
+    /* Footer */
+    footer { margin-top: 48px; background: #111; color: #ddd; padding: 24px 16px; text-align: center; }
+    footer a { color: #fff; text-decoration: underline; }
+
+    /* Mobile call button */
+    .fab {
+      position: fixed; bottom: 16px; left: 16px; z-index: 60;
+      background: var(--primary); color: #fff; border-radius: 999px; padding: 12px 16px; font-weight: 700;
+      box-shadow: 0 10px 24px rgba(183,28,28,.35); display: inline-flex; gap: 8px; align-items: center;
+    }
+    @media (min-width: 820px) { .fab { display: none; } }
+
+    /* New styles for about section */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 24px;
+      align-items: start;
+    }
+    .about-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .about-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .championship-photo {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.2);
+      margin-bottom: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .championship-photo:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,.3);
+    }
+    .image-caption {
+      font-size: 14px;
+      color: var(--muted);
+      text-align: center;
+      font-weight: 600;
+      background: rgba(183,28,28,.1);
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid rgba(183,28,28,.2);
+    }
+    
+    @media (max-width: 768px) {
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .about-image {
+        order: -1;
+      }
+      .championship-photo {
+        max-width: 280px;
+      }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#hero" class="brand">בני <span>שטאשוילי</span></a>
+      <nav class="nav-actions">
+        <a class="btn btn-ghost" href="#services">שירותים</a>
+        <a class="btn btn-ghost" href="#about">עליי</a>
+        <a class="btn btn-primary" href="#contact">קבעו טיפול</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>מאמן כושר ומטפל מוסמך במגע</h1>
+      <p>
+        ניסיון באימונים ובטיפול, זוכה מקום ראשון באליפות ישראל 2021 בפאוורליפטינג בקטגוריית ג'וניורס עד 83 ק"ג, טיפול ממוקד מותאם אישית לשיקום, הקלה וחזרה לתפקוד מלא.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="tel:0549414970">התקשרו עכשיו</a>
+        <a class="btn btn-ghost" href="mailto:Beni0549411@gmail.com">שלחו מייל</a>
+        <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://www.instagram.com/beni.shatashvili">עקבו באינסטגרם</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="./Beni-profile.jpeg" alt="בני שטאשוילי - מאמן כושר ומטפל מוסמך" class="hero-profile">
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="about" class="card">
+      <h2 class="section-title">קצת עליי</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            נעים מאוד, שמי בני שטאשוילי, מאמן כושר מוסמך, מטפל מוסמך במגע ומעסה רפואי. את דרכי בעולם הכושר התחלתי לפני יותר מעשור, מתוך תשוקה לאימונים, תנועה ופיתוח היכולות של הגוף. לאחר שנים של ליווי מתאמנים, אימונים אישיים והתפתחות מקצועית, הרחבתי את תחום העשייה שלי לעולם הטיפול והתרפיה, מתוך הבנה עמוקה של הגוף האנושי ומה שהוא באמת צריך כדי להתאושש, להתחזק ולהשתחרר מכאב.
+          </p>
+          <p>
+            כיום אני פעיל כספורטאי תחרותי בענף הפאוורליפטינג, ובשנת 2021 זכיתי במקום הראשון באליפות ישראל בקטגוריית ג'וניורס עד 83 ק"ג. את הניסיון האישי שלי כמתאמן וכמתחרה אני מביא אל כל טיפול, עם ראייה רחבה על הגוף, גבולות היכולת, והחשיבות שבשיקום נכון ומקצועי.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="./beni-compotation.jpeg" alt="בני שטאשוילי באליפות ישראל בפאוורליפטינג 2021" class="championship-photo">
+          <div class="image-caption">זוכה מקום ראשון - אליפות ישראל 2021</div>
+        </div>
+      </div>
+      <div class="band">
+        אני מטפל בשיטות מגוונות הכוללות עיסוי רפואי, עיסוי שוודי, עיסוי לספורטאים, כוסות רוח וטיפול ממוקד בטריגר פוינטס, והכול מותאם אישית לרמת הפעילות ולמטרות של כל מטופל.
+      </div>
+    </section>
+
+    <section id="services">
+      <h2 class="section-title">השירותים שלי</h2>
+      <div class="grid grid-3">
+        <div class="service">
+          <h3>עיסוי רפואי</h3>
+          <p>טיפול ממוקד לכאבים כרוניים ולשיקום לאחר פציעות, משחרר עומסים ומחזיר תנועה.</p>
+        </div>
+        <div class="service">
+          <h3>עיסוי לספורטאים</h3>
+          <p>לצורכי הכנה לאימון או לתחרות, האצה בהתאוששות, מניעת פציעות ושיפור טווחי תנועה.</p>
+        </div>
+        <div class="service">
+          <h3>עיסוי שוודי</h3>
+          <p>רגיעה עמוקה, שחרור מערכתית ונפשית, מתאים גם למי שאינו מתאמן.</p>
+        </div>
+        <div class="service">
+          <h3>כוסות רוח</h3>
+          <p>עבודה ממוקדת לשחרור רקמות רכות ושיפור זרימת דם, מסייע בהפחתת עומסים.</p>
+        </div>
+        <div class="service">
+          <h3>טריגר פוינטס</h3>
+          <p>זיהוי ונטרול נקודות כאב פעילות, הקלה מהירה והחזרת תפקוד.</p>
+        </div>
+        <div class="service">
+          <h3>אימון מותאם אישית</h3>
+          <p>בניית תכנית אימון לפי מטרה, שילוב חכם בין כוח, תנועה ושיקום.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="audience" class="card">
+      <h2 class="section-title">למי זה מתאים</h2>
+      <div class="grid grid-2">
+        <div>
+          <p>ספורטאים ומתאמנים בכל הרמות, אנשי כוחות הביטחון ומילואימניקים, כל מי שסובל מכאבים, עומסים או רוצה רגע של הקלה ושחרור.</p>
+          <p>אני לוחם פעיל במילואים בחטיבת הצנחנים, מבין היטב את העומסים הפיזיים והנפשיים של מילואימניקים ויודע מה נדרש כדי לחזור לתפקוד בצורה בריאה.</p>
+        </div>
+        <div>
+          <ul>
+            <li>הקלה בכאב ושיפור טווחי תנועה</li>
+            <li>התאוששות מהירה לאחר אימונים ועומסים</li>
+            <li>ליווי שיקומי מקצועי תוך התאמה אישית</li>
+            <li>חוויה נעימה ובטוחה בסביבה מכבדת</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2 class="section-title">יצירת קשר</h2>
+      <div class="contact-wrap">
+        <div class="contact-item">
+          <div>
+            <b>טלפון</b><br />
+            <a href="tel:0549414970">054-9414970</a>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-ghost" href="tel:0549414970">התקשרו</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div>
+            <b>אימייל</b><br />
+            <a href="mailto:Beni0549411@gmail.com">Beni0549411@gmail.com</a>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-ghost" href="mailto:Beni0549411@gmail.com">שלחו מייל</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div>
+            <b>אינסטגרם</b><br />
+            <a target="_blank" rel="noopener" href="https://www.instagram.com/beni.shatashvili">@beni.shatashvili</a>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://www.instagram.com/beni.shatashvili">פתחו פרופיל</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="fab" href="tel:0549414970">התקשרו</a>
+
+  <footer>
+    <div class="container">
+      © 2025 בני שטאשוילי, כל הזכויות שמורות | <a href="#hero">חזרה לראש הדף</a>
+    </div>
+  </footer>
+</body>
+</html>
