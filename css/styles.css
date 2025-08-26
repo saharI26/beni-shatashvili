@@ -107,6 +107,18 @@ a {
   transform: translateY(-1px); 
 }
 
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+  background: #20ba5a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
 /* ===== HERO SECTION ===== */
 .hero {
   position: relative; 
@@ -161,9 +173,33 @@ a {
 
 .hero-ctas { 
   display: flex; 
-  gap: 10px; 
+  gap: 20px; 
   justify-content: center; 
   flex-wrap: wrap; 
+}
+
+.hero-icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-icon-circle:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+.hero-icon-circle svg {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.hero-icon-circle:hover svg {
+  transform: scale(1.1);
 }
 
 .hero-image {
@@ -465,7 +501,21 @@ footer a {
   }
   
   .hero-ctas {
-    gap: 12px;
+    gap: 16px;
+  }
+  
+  .hero-icon-circle {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .hero-icon-circle svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .hero-icon-circle:hover {
+    transform: translateY(-2px) scale(1.03);
   }
   
   .topbar-inner {
@@ -520,9 +570,23 @@ footer a {
   
   .hero-ctas {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
     flex-wrap: wrap;
+  }
+  
+  .hero-icon-circle {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .hero-icon-circle svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .hero-icon-circle:hover {
+    transform: translateY(-2px) scale(1.02);
   }
   
   /* Hide hero image on iPad landscape */
@@ -651,6 +715,18 @@ footer a {
     background: rgba(183,28,28,0.05);
     border-color: rgba(183,28,28,0.3);
     transform: translateY(-1px);
+  }
+  
+  .btn-whatsapp {
+    background: #25D366;
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3);
+  }
+  
+  .btn-whatsapp:hover {
+    background: #20ba5a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
   }
   
   /* Desktop-like navigation */
