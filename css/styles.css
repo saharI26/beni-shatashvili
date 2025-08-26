@@ -356,7 +356,7 @@ footer a {
 .fab {
   position: fixed; 
   bottom: 20px; 
-  left: 20px; 
+  right: 20px; 
   z-index: 60;
   background: linear-gradient(135deg, var(--primary), var(--primary-2));
   color: #fff; 
