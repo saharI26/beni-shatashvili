@@ -58,7 +58,7 @@
     .hero {
       position: relative; isolation: isolate; color: #fff; text-align: center;
       min-height: 72vh; display: grid; place-items: center; overflow: clip;
-      background: #111;
+      background: #111; scroll-margin-top: 100px;
     }
     .hero::before {
       content: ""; position: absolute; inset: 0; z-index: -2;
@@ -110,9 +110,9 @@
     }
 
     /* Sections */
-    section { margin: 32px 0; }
+    section { margin: 32px 0; scroll-margin-top: 100px; }
     .card { background: var(--card); border: 1px solid #eee; border-radius: 16px; box-shadow: 0 8px 22px rgba(0,0,0,.06); padding: 24px; }
-    h2.section-title { margin: 0 0 16px; font-size: 26px; color: var(--primary); }
+    h2.section-title { margin: 0 0 16px; font-size: 26px; color: var(--primary); scroll-margin-top: 100px; }
     .grid { display: grid; gap: 16px; }
     @media (min-width: 760px) { .grid-2 { grid-template-columns: repeat(2, 1fr);} .grid-3 { grid-template-columns: repeat(3, 1fr);} }
 
@@ -740,6 +740,19 @@
         width: 24px;
         height: 24px;
       }
+    }
+    
+    /* Mobile scroll margin adjustments */
+    @media (max-width: 768px) {
+      section { scroll-margin-top: 80px; }
+      h2.section-title { scroll-margin-top: 80px; }
+      .hero { scroll-margin-top: 80px; }
+    }
+    
+    @media (max-width: 480px) {
+      section { scroll-margin-top: 70px; }
+      h2.section-title { scroll-margin-top: 70px; }
+      .hero { scroll-margin-top: 70px; }
     }
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
