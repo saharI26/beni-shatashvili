@@ -138,7 +138,7 @@ a {
   position: absolute; 
   inset: 0; 
   z-index: -2;
-  background-image: url('../images/beni-compotetion-vertical.jpeg');
+  background-image: url('../images/beni-background.jpeg');
   background-size: cover; 
   background-position: top;
   transform: scale(1.03);
