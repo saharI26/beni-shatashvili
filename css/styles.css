@@ -138,7 +138,7 @@ a {
   position: absolute; 
   inset: 0; 
   z-index: -2;
-  background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1800&auto=format&fit=crop');
+  background-image: url('../images/Beni-profile.jpeg');
   background-size: cover; 
   background-position: center;
   transform: scale(1.03);
